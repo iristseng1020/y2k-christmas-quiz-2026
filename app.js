@@ -1,8 +1,7 @@
 window.onload = function () {
   
 console.log("JS開始");
-alert("JS開始");
-  
+ 
   const welcomeScreen = document.getElementById("welcomeScreen");
   const testScreen = document.getElementById("testScreen");
   const startBtn = document.getElementById("startBtn");
@@ -178,9 +177,7 @@ alert("JS開始");
   let playerName = "";
 
   function loadQuestion() {
-
-    alert("載入題目");
-    
+  
     const question = questions[currentQuestion];
 
     questionNumber.textContent =
@@ -213,8 +210,6 @@ alert("JS開始");
 
   startBtn.addEventListener("click", function () {
 
-    alert("開始挑戰被點了");
-    
     playerName = playerNameInput.value.trim();
 
     if (!playerName) {
