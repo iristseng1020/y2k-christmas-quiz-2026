@@ -1,5 +1,11 @@
 window.onload = function () {
 
+  const welcomeScreen =
+    document.getElementById("welcomeScreen");
+
+  const testScreen =
+    document.getElementById("testScreen");
+
   const startBtn =
     document.getElementById("startBtn");
 
@@ -7,10 +13,11 @@ window.onload = function () {
     "click",
     function () {
 
-      alert("按鈕成功");
+      welcomeScreen.classList.add("hidden");
+
+      testScreen.classList.remove("hidden");
 
     }
   );
 
 };
-``
