@@ -30,26 +30,65 @@ window.onload = function () {
         "Discord",
         "Telegram"
       ]
+    },
+
+    {
+      question:
+        "Y2K最著名的電腦問題稱為什麼？",
+
+      answers: [
+        "Millennium Bug",
+        "Blue Screen",
+        "Dot Crash",
+        "Windows Error"
+      ]
     }
 
   ];
 
-  questionNumber.textContent =
-    "第 1 題 / 15 題";
+  let currentQuestion = 0;
 
-  questionText.textContent =
-    questions[0].question;
+  function loadQuestion() {
 
-  answerA.textContent =
-    questions[0].answers[0];
+    questionNumber.textContent =
+      `第 ${currentQuestion + 1} 題 / ${questions.length} 題`;
 
-  answerB.textContent =
-    questions[0].answers[1];
+    questionText.textContent =
+      questions[currentQuestion].question;
 
-  answerC.textContent =
-    questions[0].answers[2];
+    answerA.textContent =
+      questions[currentQuestion].answers[0];
 
-  answerD.textContent =
-    questions[0].answers[3];
+    answerB.textContent =
+      questions[currentQuestion].answers[1];
+
+    answerC.textContent =
+      questions[currentQuestion].answers[2];
+
+    answerD.textContent =
+      questions[currentQuestion].answers[3];
+
+  }
+
+  function nextQuestion() {
+
+    currentQuestion++;
+
+    if (currentQuestion >= questions.length) {
+
+      alert("題目結束");
+
+      return;
+    }
+
+    loadQuestion();
+  }
+
+  answerA.addEventListener("click", nextQuestion);
+  answerB.addEventListener("click", nextQuestion);
+  answerC.addEventListener("click", nextQuestion);
+  answerD.addEventListener("click", nextQuestion);
+
+  loadQuestion();
 
 };
