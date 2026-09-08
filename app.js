@@ -9,13 +9,17 @@ window.onload = function () {
   const startBtn =
     document.getElementById("startBtn");
 
+  alert("JS OK");
+
   startBtn.addEventListener(
     "click",
     function () {
 
-      welcomeScreen.classList.add("hidden");
+      alert("按鈕成功");
 
-      testScreen.classList.remove("hidden");
+      welcomeScreen.style.display = "none";
+
+      testScreen.style.display = "flex";
 
     }
   );
