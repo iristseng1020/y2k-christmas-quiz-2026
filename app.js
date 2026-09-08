@@ -208,18 +208,12 @@ document.getElementById("resultName").textContent =
   `玩家：${playerName}`;
 
 const elapsedSeconds =
-2
-Math.floor(
-3
-(Date.now() - startTime) / 1000
-4
-);
-5
- 
-6
+  Math.floor(
+    (Date.now() - startTime) / 1000
+  );
+
 document.getElementById("resultScore").textContent =
-7
-`答對：${score}/${questions.length}｜耗時：${elapsedSeconds} 秒`;
+  `答對：${score}/${questions.length}｜耗時：${elapsedSeconds} 秒`;
       
 return;
       
