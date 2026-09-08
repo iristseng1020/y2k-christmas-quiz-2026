@@ -1,23 +1,55 @@
 window.onload = function () {
 
-  const welcomeScreen =
-    document.getElementById("welcomeScreen");
+  const questionNumber =
+    document.getElementById("questionNumber");
 
-  const testScreen =
-    document.getElementById("testScreen");
+  const questionText =
+    document.getElementById("questionText");
 
-  const startBtn =
-    document.getElementById("startBtn");
+  const answerA =
+    document.getElementById("answerA");
 
-  startBtn.addEventListener(
-    "click",
-    function () {
+  const answerB =
+    document.getElementById("answerB");
 
-      welcomeScreen.style.display = "none";
+  const answerC =
+    document.getElementById("answerC");
 
-      testScreen.style.display = "grid";
+  const answerD =
+    document.getElementById("answerD");
 
+  const questions = [
+
+    {
+      question:
+        "2000年代初最受歡迎的即時通訊軟體是？",
+
+      answers: [
+        "MSN Messenger",
+        "LINE",
+        "Discord",
+        "Telegram"
+      ]
     }
-  );
+
+  ];
+
+  questionNumber.textContent =
+    "第 1 題 / 15 題";
+
+  questionText.textContent =
+    questions[0].question;
+
+  answerA.textContent =
+    questions[0].answers[0];
+
+  answerB.textContent =
+    questions[0].answers[1];
+
+  answerC.textContent =
+    questions[0].answers[2];
+
+  answerD.textContent =
+    questions[0].answers[3];
 
 };
