@@ -20,30 +20,33 @@ const backBtn =
   document.getElementById("backBtn");
 
 function startQuizTest() {
+
   const playerName =
     playerNameInput.value.trim();
 
   if (!playerName) {
-    nameError.textContent =
-      "請先輸入姓名。";
 
-    playerNameInput.focus();
+    nameError.textContent =
+      "請輸入姓名";
+
     return;
   }
 
   nameError.textContent = "";
 
   welcomeMessage.textContent =
-    `歡迎 ${playerName}！`;
+    `歡迎 ${playerName}`;
 
   welcomeScreen.classList.add("hidden");
+
   testScreen.classList.remove("hidden");
 }
 
 function returnToWelcome() {
+
   testScreen.classList.add("hidden");
+
   welcomeScreen.classList.remove("hidden");
-  playerNameInput.focus();
 }
 
 startBtn.addEventListener(
@@ -55,12 +58,4 @@ backBtn.addEventListener(
   "click",
   returnToWelcome
 );
-
-playerNameInput.addEventListener(
-  "keydown",
-  function (event) {
-    if (event.key === "Enter") {
-      startQuizTest();
-    }
-  }
-);
+`
