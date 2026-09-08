@@ -221,4 +221,52 @@ alert("JS開始");
     currentQuestion = 0;
     score = 0;
 
-    welcomeScreen.style
+welcomeScreen.style.display = "none";
+2
+ 
+3
+testScreen.style.display = "grid";
+4
+ 
+5
+loadQuestion();
+6
+ 
+7
+});
+8
+ 
+9
+answerA.addEventListener("click", function () {
+10
+submitAnswer(0);
+11
+});
+12
+ 
+13
+answerB.addEventListener("click", function () {
+14
+submitAnswer(1);
+15
+});
+16
+ 
+17
+answerC.addEventListener("click", function () {
+18
+submitAnswer(2);
+19
+});
+20
+ 
+21
+answerD.addEventListener("click", function () {
+22
+submitAnswer(3);
+23
+});
+24
+ 
+25
+};
