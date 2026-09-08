@@ -9,19 +9,12 @@ window.onload = function () {
   const startBtn =
     document.getElementById("startBtn");
 
-  alert("JS OK");
-
-  startBtn.addEventListener(
-    "click",
-    function () {
-
-      alert("按鈕成功");
-
-      welcomeScreen.style.display = "none";
-
-      testScreen.style.display = "flex";
-
-    }
+  alert(
+    "welcomeScreen=" +
+    (welcomeScreen !== null) +
+    "\n" +
+    "testScreen=" +
+    (testScreen !== null)
   );
 
 };
