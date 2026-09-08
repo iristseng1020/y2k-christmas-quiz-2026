@@ -209,6 +209,9 @@ alert("JS開始");
   }
 
   startBtn.addEventListener("click", function () {
+
+    alert("開始挑戰被點了");
+    
     playerName = playerNameInput.value.trim();
 
     if (!playerName) {
