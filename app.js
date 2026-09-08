@@ -199,10 +199,18 @@ console.log("JS開始");
     currentQuestion++;
 
     if (currentQuestion >= questions.length) {
-      alert(
-        `測驗結束\n玩家：${playerName}\n答對：${score}/${questions.length}`
-      );
-      return;
+      testScreen.style.display = "none";
+
+document.getElementById("resultScreen").style.display = "grid";
+
+document.getElementById("resultName").textContent =
+  `玩家：${playerName}`;
+
+document.getElementById("resultScore").textContent =
+  `答對：${score}/${questions.length}`;
+
+return;
+      
     }
 
     loadQuestion();
