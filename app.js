@@ -9,12 +9,15 @@ window.onload = function () {
   const startBtn =
     document.getElementById("startBtn");
 
-  alert(
-    "welcomeScreen=" +
-    (welcomeScreen !== null) +
-    "\n" +
-    "testScreen=" +
-    (testScreen !== null)
+  startBtn.addEventListener(
+    "click",
+    function () {
+
+      welcomeScreen.style.display = "none";
+
+      testScreen.style.display = "grid";
+
+    }
   );
 
 };
