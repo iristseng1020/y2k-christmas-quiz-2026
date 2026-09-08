@@ -38,7 +38,9 @@ window.onload = function () {
         "LINE",
         "Discord",
         "Telegram"
-      ]
+      ],
+
+      correct: 0
     },
 
     {
@@ -50,12 +52,16 @@ window.onload = function () {
         "Blue Screen",
         "Email Crash",
         "Internet Error"
-      ]
+      ],
+
+      correct: 0
     }
 
   ];
 
   let currentQuestion = 0;
+
+  let score = 0;
 
   function loadQuestion() {
 
@@ -79,15 +85,27 @@ window.onload = function () {
 
   }
 
-  function nextQuestion() {
+  function submitAnswer(answerIndex) {
+
+    if (
+      answerIndex ===
+      questions[currentQuestion].correct
+    ) {
+
+      score++;
+
+    }
 
     currentQuestion++;
 
     if (currentQuestion >= questions.length) {
 
-      alert("題目結束");
+      alert(
+        `測驗結束\n得分：${score}/${questions.length}`
+      );
 
       return;
+
     }
 
     loadQuestion();
@@ -111,22 +129,30 @@ window.onload = function () {
 
   answerA.addEventListener(
     "click",
-    nextQuestion
+    function () {
+      submitAnswer(0);
+    }
   );
 
   answerB.addEventListener(
     "click",
-    nextQuestion
+    function () {
+      submitAnswer(1);
+    }
   );
 
   answerC.addEventListener(
     "click",
-    nextQuestion
+    function () {
+      submitAnswer(2);
+    }
   );
 
   answerD.addEventListener(
     "click",
-    nextQuestion
+    function () {
+      submitAnswer(3);
+    }
   );
 
 };
