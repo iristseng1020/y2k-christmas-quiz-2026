@@ -178,6 +178,9 @@ alert("JS開始");
   let playerName = "";
 
   function loadQuestion() {
+
+    alert("載入題目");
+    
     const question = questions[currentQuestion];
 
     questionNumber.textContent =
