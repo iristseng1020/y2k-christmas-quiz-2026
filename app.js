@@ -1,4 +1,7 @@
 window.onload = function () {
+  
+  alert("JS開始");
+  
   const welcomeScreen = document.getElementById("welcomeScreen");
   const testScreen = document.getElementById("testScreen");
   const startBtn = document.getElementById("startBtn");
