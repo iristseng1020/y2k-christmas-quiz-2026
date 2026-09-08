@@ -174,6 +174,7 @@ console.log("JS開始");
 
   let currentQuestion = 0;
   let score = 0;
+  let startTime = 0;
   let playerName = "";
 
   function loadQuestion() {
@@ -206,9 +207,20 @@ document.getElementById("resultScreen").style.display = "grid";
 document.getElementById("resultName").textContent =
   `玩家：${playerName}`;
 
+const elapsedSeconds =
+2
+Math.floor(
+3
+(Date.now() - startTime) / 1000
+4
+);
+5
+ 
+6
 document.getElementById("resultScore").textContent =
-  `答對：${score}/${questions.length}`;
-
+7
+`答對：${score}/${questions.length}｜耗時：${elapsedSeconds} 秒`;
+      
 return;
       
     }
@@ -229,6 +241,7 @@ return;
     nameError.textContent = "";
     currentQuestion = 0;
     score = 0;
+    startTime = Date.now();
 
 welcomeScreen.style.display = "none";
 2
