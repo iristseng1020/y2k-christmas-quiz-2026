@@ -198,3 +198,32 @@ button:active {
       19px;
   }
 }
+
+.image-answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.image-answer {
+  width: 100%;
+  min-height: auto;
+  padding: 8px;
+  background: white;
+  border: 2px solid #d8d0ed;
+  box-shadow: none;
+}
+
+.image-answer img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+.image-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--dark-purple);
+  font-weight: 700;
+}
