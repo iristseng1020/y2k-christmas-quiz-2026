@@ -223,19 +223,40 @@ const imageAnswerD =
   let playerName = "";
 
   function loadQuestion() {
-  
-    const question = questions[currentQuestion];
+  const question = questions[currentQuestion];
 
-    questionNumber.textContent =
-      `第 ${currentQuestion + 1} 題 / ${questions.length} 題`;
+  questionNumber.textContent =
+    `第 ${currentQuestion + 1} 題 / ${questions.length} 題`;
 
-    questionText.textContent = question.question;
+  questionText.textContent = question.question;
+
+  if (question.imageQuestion) {
+    answerA.style.display = "none";
+    answerB.style.display = "none";
+    answerC.style.display = "none";
+    answerD.style.display = "none";
+
+    imageAnswers.classList.remove("hidden");
+    imageAnswers.style.display = "grid";
+
+    imageA.src = question.images[0];
+    imageB.src = question.images[1];
+    imageC.src = question.images[2];
+    imageD.src = question.images[3];
+  } else {
+    imageAnswers.style.display = "none";
+
+    answerA.style.display = "block";
+    answerB.style.display = "block";
+    answerC.style.display = "block";
+    answerD.style.display = "block";
 
     answerA.textContent = question.answers[0];
     answerB.textContent = question.answers[1];
     answerC.textContent = question.answers[2];
     answerD.textContent = question.answers[3];
   }
+}
 
   function submitAnswer(answerIndex) {
     if (answerIndex === questions[currentQuestion].correct) {
@@ -283,51 +304,51 @@ return;
     startTime = Date.now();
 
 welcomeScreen.style.display = "none";
-2
- 
-3
+
 testScreen.style.display = "grid";
-4
- 
-5
+
 loadQuestion();
-6
- 
-7
+
 });
-8
- 
-9
+
 answerA.addEventListener("click", function () {
-10
+
 submitAnswer(0);
-11
+
 });
-12
- 
-13
+
 answerB.addEventListener("click", function () {
-14
+
 submitAnswer(1);
-15
+
 });
-16
- 
-17
+
 answerC.addEventListener("click", function () {
-18
+
 submitAnswer(2);
-19
+
 });
-20
- 
-21
+
 answerD.addEventListener("click", function () {
-22
+
 submitAnswer(3);
-23
+
 });
-24
- 
-25
+
+  imageAnswerA.addEventListener("click", function () {
+  submitAnswer(0);
+});
+
+imageAnswerB.addEventListener("click", function () {
+  submitAnswer(1);
+});
+
+imageAnswerC.addEventListener("click", function () {
+  submitAnswer(2);
+});
+
+imageAnswerD.addEventListener("click", function () {
+  submitAnswer(3);
+});
+  
 };
