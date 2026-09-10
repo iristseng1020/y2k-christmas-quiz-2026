@@ -16,6 +16,33 @@ console.log("JS開始");
   const answerC = document.getElementById("answerC");
   const answerD = document.getElementById("answerD");
 
+  const imageAnswers =
+  document.getElementById("imageAnswers");
+
+const imageA =
+  document.getElementById("imageA");
+
+const imageB =
+  document.getElementById("imageB");
+
+const imageC =
+  document.getElementById("imageC");
+
+const imageD =
+  document.getElementById("imageD");
+
+const imageAnswerA =
+  document.getElementById("imageAnswerA");
+
+const imageAnswerB =
+  document.getElementById("imageAnswerB");
+
+const imageAnswerC =
+  document.getElementById("imageAnswerC");
+
+const imageAnswerD =
+  document.getElementById("imageAnswerD");
+
   const questions = [
     {
       question: "下列哪個曾經是台灣最熱門的部落格平台？",
@@ -106,6 +133,12 @@ console.log("JS開始");
         "MSN Messenger"
       ],
       correct: 3,
+      images: [
+  "images/q9_a.png",
+  "images/q9_b.png",
+  "images/q9_c.png",
+  "images/q9_d.png"
+],
       imageQuestion: true
     },
     {
@@ -117,6 +150,12 @@ console.log("JS開始");
         "fromm"
       ],
       correct: 0,
+      images: [
+  "images/q10_a.png",
+  "images/q10_b.png",
+  "images/q10_c.png",
+  "images/q10_d.png"
+],
       imageQuestion: true
     },
     {
@@ -128,6 +167,12 @@ console.log("JS開始");
         "PHS（SANYO）"
       ],
       correct: 1,
+        images: [
+  "images/q11_a.png",
+  "images/q11_b.jpg",
+  "images/q11_c.png",
+  "images/q11_d.png"
+],
       imageQuestion: true
     },
     {
